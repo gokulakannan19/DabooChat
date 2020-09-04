@@ -9,6 +9,8 @@ autopep8 = "*"
 
 [packages]
 django = "==3.1"
+pillow = "*"
+pylint-django = "*"
 
 [requires]
 python_version = "3.8"
