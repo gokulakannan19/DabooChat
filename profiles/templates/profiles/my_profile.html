@@ -55,10 +55,6 @@ my profile
                             <td>{{profile.user}}</td>
                         </tr>
                         <tr>
-                            <td>Username</td>
-                            <td>{{profile.user}}</td>
-                        </tr>
-                        <tr>
                             <td>First Name</td>
                             <td>{{profile.first_name}}</td>
                         </tr>
@@ -71,6 +67,10 @@ my profile
                             <td>{{profile.bio}}</td>
                         </tr>
                         <tr>
+                            <td>Number of Friends</td>
+                            <td>{{profile.get_friends_no}}</td>
+                        </tr>
+                        <tr>
                             <td>number of Friends</td>
                             <td>
                                 <ul>
@@ -81,6 +81,19 @@ my profile
                                 {{profile.get_friends_no}}
                             </td>
                         </tr>
+                        <tr>
+                            <td>Number of posts</td>
+                            <td>{{profile.get_post_no}}</td>
+                        </tr>
+                        <tr>
+                            <td>Number of likes given</td>
+                            <td>{{profile.get_likes_given}}</td>
+                        </tr>
+                        <tr>
+                            <td>Number of likes received</td>
+                            <td>{{profile.get_likes_received}}</td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>

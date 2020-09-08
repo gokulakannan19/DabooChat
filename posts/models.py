@@ -8,7 +8,7 @@ class Post(models.Model):
     content = models.TextField()
     image = models.ImageField(upload_to='posts', validators=[
                               FileExtensionValidator(['png', 'jpg', 'jpeg'])], blank=True)
-    liked = models.ManyToManyField(Profile, default=None, related_name='likes')
+    liked = models.ManyToManyField(Profile, blank=True, related_name='likes')
     updated = models.DateTimeField(auto_now_add=True)
     created = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
@@ -21,6 +21,8 @@ class Post(models.Model):
         return self.liked.all().count()
 
     # num of comments
+    def num_comments(self):
+        return self.comment_set.all().count()
 
     class Meta:
         ordering = ('-created',)
